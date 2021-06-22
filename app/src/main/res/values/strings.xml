@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Aplikasi Penjualan</string>
+    <string name="action_Setting">Settings</string>
+    <string name="tittle_activity_buatbarang">Buat Barang</string>
+    <string name="tittle_activity_lihatbarang">Lihat Barang</string>
+    <string name="tittle_activity_updatebarang">Update Barang</string>
+    <string name="tittle__buat_barang_baru">Buat Barang Baru</string>
+    <string name="create_account"><font color="#00ff00">text</font></string>
+    <string name="login_text">Login Page</string>
+    <string name="usename_text">User Name</string>
+    <string name="password_text">Password</string>
+    <string name="attempts_text">Attempts :</string>
+    <string name="button_login">Login</string>
+</resources>
