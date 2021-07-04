@@ -46,6 +46,7 @@ public class UpdateBarang extends AppCompatActivity {
                 //TODO Auto-generaed method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 db.execSQL("update barang set nama='"+
+               //query ini adalah query yang buat barang hanya saja dirubah menjadi update
                 text2.getText().toString() + "', jenis='" +
                         text3.getText().toString() + "', jumlah='" +
                         text4.getText().toString() + "' where no='" +

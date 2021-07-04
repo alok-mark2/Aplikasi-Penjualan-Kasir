@@ -33,21 +33,30 @@ public class Login extends AppCompatActivity {
 
 
         if ((text1.contains("admin"))&&((text2.contains("12345")))) {
+            //ini adalah database lokal yang dimana jika membuat keputusan jika textbox 1 dan 2 harus diisi dengan tulisan sama persis dengan yang
+            //ada didalam program,if text contains artinyaa jika text 1 diisi dengan kalimat admin dan text 2 diisi dengan string atau kalimat 12345 maka
             Toast.makeText(this, "Login Sukses", Toast.LENGTH_SHORT).show();
+            //akan menampilkan pemberitahuan toast yang bertuliskan login sukses
             Intent intent = new Intent(Login.this, MainActivity.class);
+            //intent adalah class untuk berpindah layout jadi setelah toast menampilkan login sukses maka program akan meng eksekusi baris program selanjutnya
+            //yaitu memindahkan tampilan dari login activity ke main activity
             startActivity(intent);
+            //memulai memindahkan user ke main activity
         }
 
         else if ((text1.matches("")||text2.matches("")))
+            //fungsi ini akan mencocokkan apakah yang user input sudah benar atau belum jika salah maka langsung menampilkan toast password atau username salah
+        //apabila kedua teks 1 dan teks 2 kosong maka akan menampilkan
 
         {
             Toast.makeText(this, "Harap lengkapi semua textbox", Toast.LENGTH_SHORT).show();
-
+    //toast yang bertuliskan harap lengkapi semua textbox
         }
 
         else {
 
             Toast.makeText(this, "Login Gagal /Username Password Salah", Toast.LENGTH_SHORT).show();
+            //
         }
 
     }

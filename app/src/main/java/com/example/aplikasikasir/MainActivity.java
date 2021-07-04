@@ -13,8 +13,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
+//main activity nya ini adalah tampilan awal tetapi ini javanya atau untuk fungsi nya
 
 public class MainActivity extends AppCompatActivity {
     String[]  daftar;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
                 Intent inte = new Intent(MainActivity.this, BuatBarang.class);
+                //method untuk memindahkan user ke halaman layout buat barang..
                 startActivity(inte);
             }
         });
@@ -80,21 +82,28 @@ public class MainActivity extends AppCompatActivity {
             builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int item) {
                     switch (item){
+                        //nah disini adalah fungsinya ada lihat barang,update barang dan hapus data
                         case 0  :
                             Intent i = new Intent(getApplicationContext(), LihatBarang.class);
                             i.putExtra("nama", selection);
                             startActivity(i);
                             break;
+                            //kemudian fungsi melihat barang ada disini
                         case 1  :
                             Intent in = new Intent(getApplicationContext(), UpdateBarang.class);
+                            //jika popup update barang di klik maka program akan meng eksekusi barisan intent yang artinya
+                            //user akan dipindahkan ke layout update barang
                             in.putExtra("nama", selection);
                             startActivity(in);
                             break;
+                            //dan ini adalah fungsi update data
                         case 2  :
                             SQLiteDatabase db = dbcenter.getWritableDatabase();
                             db.execSQL("delete from barang where nama = '"+selection+ "'");
+                            //query hapus delete (nama database)
                             RefreshList();
                             break;
+                        //dan ini fungsi untuk delete data
 
                          }
                     }

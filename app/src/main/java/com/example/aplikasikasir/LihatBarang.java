@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
+//class ini fungsinya untuk melihat barang apa saja seperti nomor,nama,jumlah,jenisnya
 public class LihatBarang extends AppCompatActivity{
     protected Cursor cursor;
     DataHelper dbHelper;
     Button ton2;
     TextView text1, text2, text3, text4;
-
+//'kemudian teks 1,2,3,4 ini nama jenis dan jumlah
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
